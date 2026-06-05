@@ -1,6 +1,7 @@
 # Allen Wang | Portfolio
 
 科幻極簡風個人作品集頁面，展示王進盈（Allen）的技術背景與經歷。
+https://activita159.github.io/nchu-my-portfolio/
 
 ## 內容
 
