@@ -19,4 +19,15 @@ https://activita159.github.io/nchu-my-portfolio/
 
 ## 預覽
 
+## 目前進修 AI 與資料科學相關課程，學習內容包含：
+
+- Python Programming
+- Data Analysis
+- Machine Learning
+- Deep Learning
+- Generative AI
+- LLM Application Development
+- Kaggle Competition Practice
+- AI Project Development
+
 直接在瀏覽器開啟 `index.html` 即可查看。
