@@ -442,6 +442,30 @@
     cursor: default;
   }
 
+  .portfolio-card.is-live {
+    position: relative;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px;
+    overflow: hidden;
+    background:
+      linear-gradient(135deg, rgba(0, 240, 255, 0.22), rgba(123, 79, 255, 0.14) 45%, rgba(20, 20, 40, 0.96) 100%),
+      var(--surface2);
+    border: 1px solid rgba(0, 240, 255, 0.72);
+    box-shadow: 0 0 28px rgba(0, 240, 255, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+
+  .portfolio-card.is-live::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.16), transparent),
+      radial-gradient(circle at 82% 18%, rgba(0, 240, 255, 0.32), transparent 28%);
+    opacity: 0.8;
+    pointer-events: none;
+  }
+
   a.portfolio-card {
     color: var(--text);
     text-decoration: none;
@@ -454,10 +478,37 @@
     box-shadow: var(--glow);
   }
 
+  .portfolio-card.is-live:hover {
+    transform: translateY(-4px);
+    border-color: #fff;
+    box-shadow: var(--glow-strong);
+  }
+
+  .portfolio-content,
+  .portfolio-cta {
+    position: relative;
+    z-index: 1;
+  }
+
   .portfolio-card .ph-icon {
     font-size: 32px;
     margin-bottom: 12px;
     opacity: 0.4;
+  }
+
+  .portfolio-card.is-live .ph-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 4px;
+    color: #fff;
+    opacity: 1;
+    box-shadow: 0 0 18px rgba(0, 240, 255, 0.18);
   }
 
   .portfolio-card .ph-text {
@@ -466,6 +517,31 @@
     letter-spacing: 2px;
     color: var(--text-dim);
     text-transform: uppercase;
+  }
+
+  .portfolio-card.is-live .ph-text {
+    display: block;
+    max-width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0;
+    color: #fff;
+    text-transform: none;
+    text-shadow: 0 0 16px rgba(0, 240, 255, 0.28);
+  }
+
+  .portfolio-desc {
+    margin-top: 8px;
+    color: rgba(224, 224, 240, 0.78);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .portfolio-cta {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--accent);
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 
   /* ---- contact ---- */
@@ -709,9 +785,13 @@
     <h2 class="section-title reveal">Portfolio</h2>
 
     <div class="portfolio-grid">
-      <a class="portfolio-card reveal" href="https://activita159.github.io/nchu-one-page/" target="_blank" rel="noopener noreferrer">
-        <span class="ph-icon">&#x1F517;</span>
-        <span class="ph-text">NCHU One Page</span>
+      <a class="portfolio-card is-live reveal" href="https://activita159.github.io/nchu-one-page/" target="_blank" rel="noopener noreferrer">
+        <span class="portfolio-content">
+          <span class="ph-icon">&#x1F517;</span>
+          <span class="ph-text">NCHU One Page</span>
+          <span class="portfolio-desc">Responsive one-page website project</span>
+        </span>
+        <span class="portfolio-cta">View Project -&gt;</span>
       </a>
       <div class="portfolio-card reveal">
         <span class="ph-icon">&#x1F4A1;</span>
